@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'GothamPro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/GothamPro/GothamPro.eot') format('eot'),
+    url('../fonts/GothamPro/GothamPro.otf')  format('opentype'),
+    url('../fonts/GothamPro/GothamPro.woff') format('woff'),
+    url('../fonts/GothamPro/GothamPro.ttf')  format('truetype'),
+    url('../fonts/GothamPro/GothamPro.svg') format('svg');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GothamPro';
+    font-style: normal;
+    font-weight: 500;
+    src: url('..fonts/GothamPro/GothamPro-Medium.eot?') format("eot"),
+    url('../fonts/GothamPro/GothamPro-Medium.otf') format("opentype"),
+    url('../fonts/GothamPro/GothamPro-Medium.woff') format("woff"),
+    url('../fonts/GothamPro/GothamPro-Medium.ttf') format("truetype"),
+    url('../fonts/GothamPro/GothamPro-Medium.svg') format("svg");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GothamProBold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/GothamPro/GothamPro-Bold.eot') format("eot"),
+        url('../fonts/GothamPro/GothamPro-Bold.otf') format("opentype"),
+        url('../fonts/GothamPro/GothamPro-Bold.woff') format("woff"),
+        url('../fonts/GothamPro/GothamPro-Bold.ttf') format("truetype"),
+        url('../fonts/GothamPro/GothamPro-Bold.svg') format("svg");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../fonts/FontAwesome/fa-brands-400.eot");
+    src: url("../fonts/FontAwesome/fa-brands-400-1.eot") format("embedded-opentype"), url("../fonts/FontAwesome/fa-brands-400.woff2") format("woff2"), url("../fonts/FontAwesome/fa-brands-400.woff") format("woff"), url("../fonts/FontAwesome/fa-brands-400.ttf") format("truetype"), url("../fonts/FontAwesome/fa-brands-400.svg") format("svg");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Font Awesome 5 Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../fonts/FontAwesome/fa-regular-400.eot");
+    src: url("../fonts/FontAwesome/fa-regular-400-1.eot") format("embedded-opentype"), url("../fonts/FontAwesome/fa-regular-400.woff2") format("woff2"), url("../fonts/FontAwesome/fa-regular-400.woff") format("woff"), url("../fonts/FontAwesome/fa-regular-400.ttf") format("truetype"), url("../fonts/FontAwesome/fa-regular-400.svg") format("svg");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("../fonts/FontAwesome/fa-solid-900.eot");
+    src: url("../fonts/FontAwesome/fa-solid-900-1.eot") format("embedded-opentype"), url("../fonts/FontAwesome/fa-solid-900.woff2") format("woff2"), url("../fonts/FontAwesome/fa-solid-900.woff") format("woff"), url("../fonts/FontAwesome/fa-solid-900.ttf") format("truetype"), url("../fonts/FontAwesome/fa-solid-900.svg") format("svg");
+    font-display: swap;
+}
+
+.fa,
+.fas {
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 900;
+}
+
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+}
+
+.fal {
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 300;
+}
+
+.far {
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 400;
+}

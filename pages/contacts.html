@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<meta name="description" content='Как добраться в клинику неврологии и реабилитации Клиника НАИ'  />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/contact-style.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<script src="../js/bootstrap.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100;200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" href="../css/materialize.css">
+	<script src="../js/materialize.js"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+            
+
+	<title>Контакты и график работы Клиники NAI</title>
+</head>
+<body>
+	<!-- <div class="container">+38 (096)-5-003-003</div> -->
+	<header id="header" class="sticky-top">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container-lg">
+				<a href="/" class="navbar-brand"><img src="../img/logo.png" id="logImg" alt="Клиника неврологии NAI"></a>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto mb-lg-0" id="nvBar" style="transition: all 3s;">
+						<li class="nav-item">
+							<a href="/" class="nav-link bordDec">Главная</a>
+						</li>
+						<!-- <li class="nav-item">
+							<a  href="/pages/varieties.html" class="nav-link bordDec ">Направления</a>
+						</li> -->
+						<li class="nav-item">
+							<a href="./services.html" class="nav-link bordDec">Услуги</a>
+						</li>
+						<li class="nav-item">
+							<a href="#/doctors/" class="nav-link bordDec" data-scroll="#doctors-block">Врачи</a>
+						</li>
+						<li class="nav-item">
+							<a href="./about.html" class="nav-link bordDec">О нас</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="active-link nav-link bordDec">Контакты</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="bttnn bttn-default btnf btn-white btn-animate" data-modal="modal_1">Запись на прием</a>
+						</li>
+					</ul>
+				</div>
+
+				
+				</div>
+				<button class="nav-toggle" id="nav_toggle" type="button">
+					<span class="nav-toggle_item"></span>
+				</button>
+		</nav>
+	</header>
+
+	<div class="overlayt" data-close=""></div>
+
+	<div id="modal_1" class="dlg-modal dlg-modal-fade login-box">
+		<span class="closer" data-close=""></span>
+		<form method="POST" action="../php/send-message-to-telegram.php">
+			<div class="user-box">
+				<input type="text" name="name" required="">
+				<label>Введите имя</label>
+			  </div>
+			  <div class="user-box">
+				<input type="tel" id="phone1" size="40" name="phone" required="">
+				<label>Номер телефона</label>
+			  </div>
+			  <!-- <div class="user-box">
+				<p>
+					<select name="doctor">
+						<option value="doc">Невролог</option>
+						<option value="ter">Терапевт</option>
+						<option value="ass">Овтальмолог</option>
+				  	</select>
+				</p>
+			  </div> -->
+			  <input type="submit" name="subm" value="Записаться" onclick="getPush()">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Записаться -->
+			  <input type="hidden" name="act" value="order">
+		</form>
+	</div>
+
+
+    
+
+
+    <!-- <main> -->
+
+        <!-- <div class="contact-sec">
+            <div class="conatiner">
+                <div class="h2 mt-3 mb-4 mb-md-6 title title-sub text-center">
+                    <h1>Контакты</h1>
+                </div>
+
+                <div class="container iconss">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 mb-3 mt-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i id="ph-trans" class="fas fa-phone"></i>
+                                        </div>
+                                        <div class="text">
+                                            <p id="bbg"><span>Телефон:</span> +38 (096)-003-003 <br>+38 (095)-003-003</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Адрес</span> ул. Московский проспект 96</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="dbox w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="text">
+                                            <p><span>Почта</span> info@nai.clinic</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 mb-3">
+                            <div class="contact-wrap">
+                                    <form method="POST" action="./send-message-to-telegram.php">
+                                        <input name="name" type="text" class="feedback-input" placeholder="ФИО" />   
+                                        <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                                        <input name="phone" type="text" class="feedback-input" placeholder="Номер телефона" />
+                                        <textarea name="text" class="feedback-input" placeholder="Сообщение"></textarea>
+                                        <input type="submit" value="Отправить"/>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- </main> -->
+
+    <section class="main-section">
+        <div class="container">
+            <div class="contact-page-wrap">
+                <div class="item-contact-wrap">
+                    <div class="main-section-title h2 mt-3 mb-4 mb-md-6 title title-sub">
+                        <h1>Контакты</h1>
+                    </div>
+                    <div class="item-contact-block-wrap">
+                        <div class="item-contact-block">
+                            <div class="dbox w-100">
+                                <div class="row">
+                                    <div class="col-lg-4 my-auto">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i id="ph-trans" class="fas fa-phone"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="text">
+                                            <p id="ml-text" ><span>Телефон:</span> +38 (096)-5-003-003 <br>+38 (095)-5-003-003</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-contact-block">
+                            <div class="dbox w-100">
+                                <div class="row">
+                                    <div class="col-lg-4 my-auto">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="text">
+                                            <p><span>Адрес:</span> Московский проспект, 96</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-contact-block">
+                            <div class="dbox w-100">
+                                <div class="row">
+                                    <div class="col-lg-4 my-auto">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="text">
+                                            <p><span>Почта</span> info@nai.clinic</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-contact-block">
+                            <div class="dbox w-100">
+                                <div class="row">
+                                    <div class="col-lg-4 my-auto">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i class="far fa-clock"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="text">
+                                            <p><span>График работы:</span>Пн - Пт: 9:00-19:00</p>
+                                            <p>Сб: 9:00-15:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-contact-block ">
+                            <!-- <div class="instagram text-center d-flex align-items-center justify-content-center ">
+                                <img class='logo-inst' src="../img/inst.png" alt="">
+                            </div> -->
+                            <a href="https://www.instagram.com/nai.clinic/" target="_blank" type="button" class="text-center d-flex align-items-center justify-content-center inst">
+                                <img src="../img/inst.png" alt="">
+                            </a>
+                        </div>
+                        <div class="item-contact-block ">
+                            <!-- <div class="instagram text-center d-flex align-items-center justify-content-center ">
+                                <img class='logo-inst' src="../img/inst.png" alt="">
+                            </div> -->
+                            <a href="https://www.facebook.com/profile.php?id=100075337097846" target="_blank" type="button" class="text-center d-flex align-items-center justify-content-center fb">
+                                <img src="../img/fb.png" alt="">
+                            </a>
+                        </div>
+                        <!-- <div class="item-contact-block"></div> -->
+                    </div>
+                </div>
+                <div class="item-contact-form">
+                    <div class="map-container">
+                            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1525.3999818430816!2d36.27455296685828!3d49.98498308955213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09ea7f6e451%3A0x9fc88946a71d658a!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0L_RgNC-0YHQvy4sIDk2LCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1643268928533!5m2!1sru!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="item-contact-form-wrap">
+                        <!-- <div class="contact-wrap"> -->
+                            <form method="POST" action="../php/send-ms-from-contact.php" >
+                                <input name="name" type="text" class="feedback-input" placeholder="ФИО" />   
+                                <input name="email" type="text" class="feedback-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email" />
+                                <input name="phone" type="text" class="feedback-input" maxlength="12" placeholder="Номер телефона" required/>
+                                <textarea name="text" class="feedback-input" placeholder="Сообщение"></textarea>
+                                <input type="submit" value="Отправить"/>
+                            </form>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1525.3999818430816!2d36.27455296685828!3d49.98498308955213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09ea7f6e451%3A0x9fc88946a71d658a!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0L_RgNC-0YHQvy4sIDk2LCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1643268928533!5m2!1sru!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+	<footer class="footer">
+		<div class="container-footer">
+			<div class="row-footer">
+				<div class="footer-col text-center">
+					<h4>Наши контакты</h4>
+					<ul>
+						<li><a href="tel:+380965003003">+38 (096)-5-003-003</a></li>
+						<li><a href="tel:+380935003003">+38 (093)-5-003-003</a></li>
+						<li><a href="#">Московский проспект, 96</a></li>
+						<li><a href="mailto:info@nai.clinic">info@nai.clinic</a></li>
+					</ul>
+				</div>
+				<div class="footer-col text-center">
+					<h4>Навигация</h4>
+					<ul>
+						<li><a href="/">Главная</a></li>
+						<!-- <li><a href="#">Направления</a></li> -->
+						<li><a href="./services.html">Услуги</a></li>
+						<li><a href="#/doctors/" data-scroll="#doctors-block">Врачи</a></li>
+						<li><a href="./about.html">О нас</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<!-- <div class="footer-col">
+					<h4>Услуги</h4>
+					<ul>
+						<li><a href="#">Выезд невролога</a></li>
+						<li><a href="#">Дневной стационар</a></li>
+						<li><a href="#">Амбул прием</a></li>
+						<li><a href="#">Гирудотерапия (Пиявки)</a></li>
+					</ul>
+				</div> -->
+				<div class="footer-col text-center">
+					<h4>Социальные сети</h4>
+					<div class="social-links">
+						<a href="https://www.instagram.com/nai.clinic/" target="_blank"><i class="fab fa-instagram"></i></a>
+						<a href="https://www.facebook.com/profile.php?id=100075337097846"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-telegram-plane"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sec-footer" style="height: 50px; width: 100%; background-color: rgb(67, 177, 250); padding: 1rem;">
+			<div class="container">
+				 <p style="color: white;">© Клиника «НАИ»</p>
+			</div>
+		</div>
+   </footer>
+
+
+   
+	<script src="../main.js"></script>
+	<script>const typeAnimate = 'fade';</script>
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="../js/popper.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/form-main.js"></script>
+</body>
+</html>

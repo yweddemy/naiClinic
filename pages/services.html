@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content='Стоимость медицинских услуг клиники неврологии и реабилитации Клиника NAI'  />
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../css/services-style.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<script src="./js/bootstrap.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100;200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" href="../css/materialize.css">
+	<script src="../js/materialize.js"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+	<title>Цены на услуги неврологической клиники NAI</title>
+</head>
+<body>
+	<!-- <div class="container">+38 (096)-5-003-003</div> -->
+	<header id="header" class="sticky-top">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container-lg">
+				<a href="/" class="navbar-brand"><img src="../img/logo.png" id="logImg" alt="Клиника неврологии NAI"></a>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto mb-lg-0" id="nvBar" style="transition: all 3s;">
+						<li class="nav-item">
+							<a href="/" class="nav-link bordDec">Главная</a>
+						</li>
+						<!-- <li class="nav-item">
+							<a  href="/pages/varieties.html" class="nav-link bordDec ">Направления</a>
+						</li> -->
+						<li class="nav-item">
+							<a href="#" class="active-link nav-link bordDec">Услуги</a>
+						</li>
+						<li class="nav-item">
+							<a href="/" class="nav-link bordDec">Врачи</a>
+						</li>
+						<li class="nav-item">
+							<a href="./about.html" class="nav-link bordDec">О нас</a>
+						</li>
+						<li class="nav-item">
+							<a href="./contacts.html" class="nav-link bordDec">Контакты</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="bttnn bttn-default btnf btn-white btn-animate" data-modal="modal_1">Запись на прием</a>
+						</li>
+					</ul>
+				</div>
+
+				
+				</div>
+				<button class="nav-toggle" id="nav_toggle" type="button">
+					<span class="nav-toggle_item"></span>
+				</button>
+		</nav>
+	</header>
+
+	<div class="overlayt" data-close=""></div>
+
+	<div id="modal_1" class="dlg-modal dlg-modal-fade login-box">
+		<span class="closer" data-close=""></span>
+		<form method="POST" action="../php/send-message-to-telegram.php">
+			<div class="user-box">
+				<input type="text" name="name" required="">
+				<label>Введите имя</label>
+			  </div>
+			  <div class="user-box">
+				<input type="tel" id="phone1" size="40" name="phone" required="">
+				<label>Номер телефона</label>
+			  </div>
+			  <!-- <div class="user-box">
+				<p>
+					<select name="doctor">
+						<option value="doc">Невролог</option>
+						<option value="ter">Терапевт</option>
+						<option value="ass">Овтальмолог</option>
+				  	</select>
+				</p>
+			  </div> -->
+			  <input type="submit" name="subm" value="Записаться" onclick="getPush()">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Записаться -->
+			  <input type="hidden" name="act" value="order">
+		</form>
+	</div>
+
+	<main>
+
+
+        <div class="container mb-5 service-page">
+            <div class="mb-md-6 mt-5 title-serv text-center"><h1>Выбрать услугу</h1></div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="price_title__block">Консультация специалистов</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-10">
+                        <div class="dropdown__wrap">
+                            <div class="dropdown__content">
+                                <h3 class="dropdown__title ">Услуги</h3>
+                                <div class="dropdown__arrow">
+                                    <img src="../img/i-open-down.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="dropdown__content_hide services">
+                                <div class="programs_head">
+                                    <div class="programs_head__item head-name-services">Название услуги</div>
+                                    <div class="programs_head__item head-price-services">Цена, грн</div>
+                                </div>
+                                <div class="programs_body__wrap">
+                                    <div class="programs_body__head-services">Первичная консультация</div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Первичная консультация невролога 
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            500  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Первичная консультация детского невролога
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            500  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Первичная консультация нейроофтальмолога
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            400  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Первичная консультация пульмонолга
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            400  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Первичная консультация психиатра
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            500  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Консультация остеопата
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            600  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Выездная консультация невролога
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            1000  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Выездная консультация терпевта
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            1000  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Выездная консультация пульмонолога
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            1000  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body__head-services">Вторичная консультация</div>
+                                    
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Вторичная консультация невролога 
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            400  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Вторичная консультация детского невролога
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            400  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Вторичная консультация нейроофтальмолога
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            300  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Вторичная консультация пульмонолога
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            300  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Вторичная консультация психиатра
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            400  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <h2 class="price_title__block">Диагностика</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-10">
+                        <div class="dropdown__wrap">
+                            <div class="dropdown__content">
+                                <h3 class="dropdown__title ">Услуги</h3>
+                                <div class="dropdown__arrow">
+                                    <img src="../img/i-open-down.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="dropdown__content_hide services">
+                                <div class="programs_head">
+                                    <div class="programs_head__item head-name-services">Название услуги</div>
+                                    <div class="programs_head__item head-price-services">Цена, грн</div>
+                                </div>
+                                <div class="programs_body__wrap">
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Электронейромиография (ЭНМГ) - одна конечность 
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            300  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Электроэнцефалография (ЭЭГ)
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            250  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Эхоэнцефалография (ЭхоЭГ)
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            250  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Реоэнцефалография ( РЭГ)
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            250  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            ЭЭГ + ЭхоЭГ+РЭГ
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            600  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Электрокардиография (ЭКГ)
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            120  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <h2 class="price_title__block">Лечебные процедуры</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-10">
+                        <div class="dropdown__wrap">
+                            <div class="dropdown__content">
+                                <h3 class="dropdown__title ">Услуги</h3>
+                                <div class="dropdown__arrow">
+                                    <img src="../img/i-open-down.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="dropdown__content_hide services">
+                                <div class="programs_head">
+                                    <div class="programs_head__item head-name-services">Название услуги</div>
+                                    <div class="programs_head__item head-price-services">Цена, грн</div>
+                                </div>
+                                <div class="programs_body__wrap">
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Паравертебральная блокада (без стоимости препарата) 
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            250  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Плазмаферез (один сеанс)
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            900  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Гирудотерапия (сеанс)
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            300  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Гирудотерапия (1 пиявка)
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            40  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <h2 class="price_title__block">Услуги дневного стационара</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-10">
+                        <div class="dropdown__wrap">
+                            <div class="dropdown__content">
+                                <h3 class="dropdown__title ">Услуги</h3>
+                                <div class="dropdown__arrow">
+                                    <img src="../img/i-open-down.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="dropdown__content_hide services">
+                                <div class="programs_head">
+                                    <div class="programs_head__item head-name-services">Название услуги</div>
+                                    <div class="programs_head__item head-price-services">Цена, грн</div>
+                                </div>
+                                <div class="programs_body__wrap">
+                                    <div class="programs_body services">
+                                        <div class="programs_body__item text-normal head-name-services">
+                                            Дневной стационар 
+                                        </div>
+                                        <div class="programs_body__item head-price-services">
+                                            400  <div class="span">грн</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+    </main>
+
+
+
+
+
+
+
+    <footer class="footer">
+		<div class="container-footer">
+			<div class="row-footer">
+				<div class="footer-col text-center">
+					<h4>Наши контакты</h4>
+					<ul>
+						<li><a href="tel:+380965003003">+38 (096)-5-003-003</a></li>
+						<li><a href="tel:+380935003003">+38 (093)-5-003-003</a></li>
+						<li><a href="#">Московский проспект, 96</a></li>
+						<li><a href="mailto:info@nai.clinic">info@nai.clinic</a></li>
+					</ul>
+				</div>
+				<div class="footer-col text-center">
+					<h4>Навигация</h4>
+					<ul>
+						<li><a href="/">Главная</a></li>
+						<!-- <li><a href="#">Направления</a></li> -->
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#/doctors/" data-scroll="#doctors-block">Врачи</a></li>
+						<li><a href="./about.html">О нас</a></li>
+						<li><a href="./contacts.html">Контакты</a></li>
+					</ul>
+				</div>
+				<!-- <div class="footer-col">
+					<h4>Услуги</h4>
+					<ul>
+						<li><a href="#">Выезд невролога</a></li>
+						<li><a href="#">Дневной стационар</a></li>
+						<li><a href="#">Амбул прием</a></li>
+						<li><a href="#">Гирудотерапия (Пиявки)</a></li>
+					</ul>
+				</div> -->
+				<div class="footer-col text-center">
+					<h4>Социальные сети</h4>
+					<div class="social-links">
+						<a href="https://www.instagram.com/nai.clinic/" target="_blank"><i class="fab fa-instagram"></i></a>
+						<a href="https://www.facebook.com/profile.php?id=100075337097846"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-telegram-plane"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sec-footer" style="height: 50px; width: 100%; background-color: rgb(67, 177, 250); padding: 1rem;">
+			<div class="container">
+				 <p style="color: white;">© Клиника «НАИ»</p>
+			</div>
+		</div>
+   </footer>
+
+	<script src="../main.js"></script>
+	<script>const typeAnimate = 'fade';</script>
+
+</body>
+</html>

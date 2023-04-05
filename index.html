@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content='Клиника неврологии NAI в Харькове. Новейшое оборудование для диагностики. Решение проблем неврологии, лечение боли и реабилитация после инсульта. Квалифицированный невролог.'  />
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://nai.clinic/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<script src="./js/bootstrap.js"></script>
+	<link rel="stylesheet" href="./slick/slick.css">
+	<link rel="stylesheet" href="./slick/slick-theme.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@100;200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" href="./css/materialize.css">
+	<script src="./js/materialize.js"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+	<title>Клиника неврологии "NAI" в Харькове</title>
+</head>
+<body>
+	<!-- <div class="container">+38 (096)-5-003-003</div> -->
+	<header id="header" class="sticky-top">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container-lg">
+				<a href="#" class="navbar-brand"><img src="img/logo.png" id="logImg" alt="Клиника неврологии NAI"></a>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto mb-lg-0" id="nvBar" style="transition: all 3s;">
+						<li class="nav-item">
+							<a href="#" class="active-link nav-link bordDec">Главная</a>
+						</li>
+						<!-- <li class="nav-item">
+							<a  href="/pages/varieties.html" class="nav-link bordDec ">Направления</a>
+						</li> -->
+						<li class="nav-item">
+							<a href="./pages/services.html" class="nav-link bordDec">Услуги</a>
+						</li>
+						<li class="nav-item">
+							<a href="#/doctors/" class="nav-link bordDec" data-scroll="#doctors-block">Врачи</a>
+						</li>
+						<li class="nav-item">
+							<a href="./pages/about.html" class="nav-link bordDec">О нас</a>
+						</li>
+						<li class="nav-item">
+							<a href="./pages/contacts.html" class="nav-link bordDec">Контакты</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="bttnn bttn-default btnf btn-white btn-animate" data-modal="modal_1">Запись на прием</a>
+						</li>
+					</ul>
+				</div>
+
+				
+				</div>
+				<button class="nav-toggle" id="nav_toggle" type="button">
+					<span class="nav-toggle_item"></span>
+				</button>
+		</nav>
+	</header>
+
+	<div class="overlayt" data-close=""></div>
+
+	<div id="modal_1" class="dlg-modal dlg-modal-fade login-box">
+		<span class="closer" data-close=""></span>
+		<form method="POST" action="./php/send-message-to-telegram.php">
+			<div class="user-box">
+				<input type="text" name="name" required="">
+				<label>Введите имя</label>
+			  </div>
+			  <div class="user-box">
+				<input type="tel" id="phone1" size="40" name="phone" required="">
+				<label>Номер телефона</label>
+			  </div>
+			  <!-- <div class="user-box">
+				<p>
+					<select name="doctor">
+						<option value="doc">Невролог</option>
+						<option value="ter">Терапевт</option>
+						<option value="ass">Овтальмолог</option>
+				  	</select>
+				</p>
+			  </div> -->
+			  <input type="submit" name="subm" value="Записаться" onclick="getPush()">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<!-- Записаться -->
+			  <input type="hidden" name="act" value="order">
+		</form>
+	</div>
+
+	<main>
+
+		<div class="container-fluid">
+			<div class="slider">
+				<div class="slide">
+					<div class="photo text-center" style="background-image: url('./img/sliber-bg-one.png')">
+						<div class="container">
+							<div class="title mb-4">ВЫЕЗД НЕВРОЛОГА НА ДОМ<br></div>
+							<!-- <p class="subtitle text-sm mb">Диагностика. Индивидуальный план лечения.<br> Контроль динамики состояния пациента.<br> Реабилитация после выздоровления.</p> -->
+							<div class="btn-wrap mt-4">
+								<a href="#" class="bttnn bttn-default btzp btn-white btn-animate" data-modal="modal_1">Записаться</a>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="text">Plazmaferez</div> -->
+				</div>
+				<div class="slide">
+					<div class="photo text-center" style="background-image: url('./img/33222.png')">
+						<div class="container">
+							<div class="title mb-4">ВЫЕЗД ТЕРАПЕВТА НА ДОМ<br></div>
+							<div class="btn-wrap mt-4">
+								<a href="#" class="bttnn bttn-default btzp btn-white btn-animate" data-modal="modal_1">Записаться</a>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="text">Plazmaferez</div> -->
+				</div>
+				<!-- <div class="slide">
+					<div class="photo" style="background-image: url('./img/nevr.png');"></div>
+					<div class="text">Plazmaferez</div>
+				</div> -->
+			</div>
+		</div>
+
+
+		<!-- about clinic -->
+		<div class="intro-sec bg-blue">
+			<div class="container">
+			   <div class="row intro">
+				  <div class="col-lg-6" style="vertical-align: middle;">
+					 <div class="intro-text pt-6 pb-6">
+						<div class="intro_name">Клиника NAI</div>
+						<h1 class="intro__title mb-3">Неврологическая клиника</h1>
+						<p class="intro__subtitle mb-0">NAI - единственная узкопрофильная клиника неврологии в Харькове. Мы специализируемся на диагностике и лечении пациентов с патологией центральной и периферической нервной системы. Наши специалисты окажут Вам квалифицированную медицинскую помощь</p>
+					 </div>
+				  </div>
+				  <div class="col-lg-6 align-items-end d-flex">
+					  <div class=" brain-img">
+						<video id="video-brain" autoplay muted preload="auto" loop>
+							<source type="video/mp4" src="./img/333.webm">
+						</video>
+						</div>
+				  </div>
+			   </div>
+			</div>
+		 </div>
+
+
+
+		 <!-- doctors slider -->
+
+		 <div class="doctors-sec sec lazy" id="doctors-block">
+			<div class="container">
+			   <div class="h2 mb-4 mb-md-6 title title-sub text-center"><h1>Наши врачи</h1></div>
+			   <div class="row doctors doctors-main-slider">
+				  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+					 <div class="card">
+						<div class="text-center back-card-photo-cl" id="back-card-photo">
+						   <a href="#" class="card-photo">
+							  <img src="./img/neurolog2.png" alt="Невролог - Деревецкая Виктория Геннадиевна" data-lazy-src="./img/neurolog2.png">
+						   </a>
+						</div>
+						<div class="card-body" style="height: 230.938px;">
+						   <div class="card-name text-lg font-500"><a href="#">Деревецкая Виктория Геннадиевна</a></div>
+						   <p class="card-text text-md mb-3"> <!--<i id="dot-circle">•</i> --> Врач-невролог</p>
+						   <ul class="list-unstyled text-md list-img card-list mb-0" >
+							  <li>
+								 <span><i class="fas fa-star" id="star" style="margin-right: .45rem; color: #6494c4"></i>Кандидат медицинских наук</span>
+							  </li>
+							  <li>
+								 <span><i class="fas fa-briefcase" id="experience-icon" style="margin-right: .45rem; color: #6494c4;"></i>Опыт работы 23 года</span>
+							  </li>
+						   </ul>
+						</div>
+					 </div>
+				  </div>
+				  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+					<div class="card">
+					   <div class="text-center back-card-photo-cl" id="back-card-photo">
+						  <a href="#" class="card-photo">
+							 <img src="./img/maiboroda.png" alt="Невролог - Майборода Олег Феликсович" data-lazy-src="./img/neurolog2.png">
+						  </a>
+					   </div>
+					   <div class="card-body" style="height: 230.938px;">
+						  <div class="card-name text-lg font-500"><a href="#">Майборода Олег Феликсович</a></div>
+						  <p class="card-text text-md mb-3"> <!--<i id="dot-circle">•</i> --> Врач-невролог</p>
+						  <ul class="list-unstyled text-md list-img card-list mb-0" >
+							 <li>
+								<span><i class="fas fa-star" id="star" style="margin-right: .45rem; color: #6494c4"></i>Врач высшей категории</span>
+							 </li>
+							 <li>
+								<span><i class="fas fa-briefcase" id="experience-icon" style="margin-right: .45rem; color: #6494c4;"></i>Опыт работы 32 года</span>
+							 </li>
+						  </ul>
+					   </div>
+					</div>
+				 </div>
+				  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+					 <div class="card">
+						<div class="text-center back-card-photo-cl">
+						   <a href="#" class="card-photo">
+							  <img src="./img/kidNeurolog.png" alt="Невролог - Перепелица Ольга Евгеньевна" data-lazy-src="./img/kidNeurolog.png">
+						   </a>
+						</div>
+						<div class="card-body" style="height: 230.938px;">
+						   <div class="card-name text-lg font-500"><a href="#">Перепелица Ольга Евгеньевна</a></div>
+						   <p class="card-text text-md mb-3">Врач-невролог</p>
+						   <ul class="list-unstyled text-md list-img card-list mb-0">
+							  <li>
+								 <span><i class="fas fa-star" id="star" style="margin-right: .45rem; color: #6494c4"></i>Врач высшей категории</span>
+							  </li>
+							  <li>
+								 <span><i class="fas fa-briefcase" id="experience-icon" style="margin-right: .45rem; color: #6494c4;"></i>Опыт работы 25 лет</span>
+							  </li>
+						   </ul>
+						</div>
+					 </div>
+				  </div>
+				  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+					 <div class="card">
+						<div class="text-center back-card-photo-cl">
+						   <a href=#" class="card-photo">
+							  <img src="./img/osteopat.png" alt="Остеопат - Хомайко Александр Дмитриевич">
+						   </a>
+						</div>
+						<div class="card-body" style="height: 230.938px;">
+						   <div class="card-name text-lg font-500"><a href="#">Хомайко Александр Дмитриевич</a></div>
+						   <p class="card-text text-md mb-3">Реабилитолог, мануальный терапевт, остеопат</p>
+						   <ul class="list-unstyled text-md list-img card-list mb-0">
+							<li>
+							   <span><i class="fas fa-star" id="star" style="margin-right: .45rem; color: #6494c4"></i>Врач высшей категории</span>
+							</li>
+							<li>
+							   <span><i class="fas fa-briefcase" id="experience-icon" style="margin-right: .45rem; color: #6494c4;"></i>Опыт работы 14 лет</span>
+							</li>
+						 </ul>
+						</div>
+					 </div>
+				  </div>
+				  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+					 <div class="card" >
+						<div class="text-center back-card-photo-cl">
+						   <a href="#" class="card-photo">
+							  <img src="./img/diagnost.png" alt="Диагност - Бубилева Ирина Григорьевна" ">
+						   </a>
+						</div>
+						<div class="card-body" style="height: 230.938px;">
+						   <div class="card-name text-lg font-500"><a href="#">Бубилева Ирина Григорьевна</a></div>
+						   <p class="card-text text-md mb-3">Врач функциональной диагностики</p>
+						   <ul class="list-unstyled text-md list-img card-list mb-0">
+							<li>
+								<span><i class="fas fa-briefcase" id="experience-icon" style="margin-right: .45rem; color: #6494c4;"></i>Опыт работы 30 лет</span>
+							 </li>
+						   </ul>
+						</div>
+					 </div>
+				  </div>
+				  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+					 <div class="card">
+						<div class="text-center back-card-photo-cl">
+						   <a href="#" class="card-photo">
+							  <img src="./img/oftalmolog.png" alt="Офтальмолог - Рябов Сергей Григорьевич" >
+						   </a>
+						</div>
+						<div class="card-body" style="height: 230.938px;">
+						   <div class="card-name text-lg font-500"><a href="#">Рябов Сергей Григорьевич</a></div>
+						   <p class="card-text text-md mb-3">Врач-офтальмолог</p>
+						   <ul class="list-unstyled text-md list-img card-list mb-0">
+							  <li>
+								 <span><i class="fas fa-star" id="star" style="margin-right: .45rem; color: #6494c4"></i>Врач высшей категории</span>
+							  </li>
+							  <li>
+								 <span><i class="fas fa-briefcase" id="experience-icon" style="margin-right: .45rem; color: #6494c4;"></i>Опыт работы 40 лет</span>
+							  </li>
+						   </ul>
+						</div>
+					 </div>
+				  </div>
+				  <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+					 <div class="card">
+						<div class="text-center back-card-photo-cl">
+						   <a href="#" class="card-photo">
+							  <img src="./img/terapevt.png" alt="Терапевт - Никулина Юлия Николаевна">
+						   </a>
+						</div>
+						<div class="card-body" style="height: 230.938px;">
+						   <div class="card-name text-lg font-500"><a href="#">Никулина Юлия Николаевна</a></div>
+						   <p class="card-text text-md mb-3">Врач-терапевт</p>
+						   <ul class="list-unstyled text-md list-img card-list mb-0">
+							  <li>
+								 <span></span><i class="fas fa-star" id="star" style="margin-right: .45rem; color: #6494c4"></i>Врач высшей категории</span>
+							  </li>
+							  <li>
+								 <span><i class="fas fa-briefcase" id="experience-icon" style="margin-right: .45rem; color: #6494c4;"></i>Опыт работы 18 лет</span>
+							  </li>
+						   </ul>
+						</div>
+					 </div>
+				  </div>
+			   </div>
+			</div>
+		 </div>
+   
+		 
+
+
+	</main>
+
+	<!--The div element for the map -->
+
+	<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1525.3999818430816!2d36.27455296685828!3d49.98498308955213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09ea7f6e451%3A0x9fc88946a71d658a!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0L_RgNC-0YHQvy4sIDk2LCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1643268928533!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+	<footer class="footer">
+		<div class="container-footer">
+			<div class="row-footer">
+				<div class="footer-col text-center">
+					<h4>Наши контакты</h4>
+					<ul>
+						<li><a href="tel:+380965003003">+38 (096)-5-003-003</a></li>
+						<li><a href="tel:+380935003003">+38 (093)-5-003-003</a></li>
+						<li><a href="#">Московский проспект, 96</a></li>
+						<li><a href="mailto:info@nai.clinic">info@nai.clinic</a></li>
+					</ul>
+				</div>
+				<div class="footer-col text-center">
+					<h4>Навигация</h4>
+					<ul>
+						<!-- <li><a href="#">Направления</a></li> -->
+						<li><a href="./pages/services.html">Услуги</a></li>
+						<li><a href="#/doctors/" data-scroll="#doctors-block">Врачи</a></li>
+						<li><a href="./pages/about.html">О нас</a></li>
+						<li><a href="./pages/contacts.html">Контакты</a></li>
+					</ul>
+				</div>
+				<!-- <div class="footer-col">
+					<h4>Услуги</h4>
+					<ul>
+						<li><a href="#">Выезд невролога</a></li>
+						<li><a href="#">Дневной стационар</a></li>
+						<li><a href="#">Амбул прием</a></li>
+						<li><a href="#">Гирудотерапия (Пиявки)</a></li>
+					</ul>
+				</div> -->
+				<div class="footer-col text-center">
+					<h4>Социальные сети</h4>
+					<div class="social-links">
+						<a href="https://www.instagram.com/nai.clinic/" target="_blank"><i class="fab fa-instagram"></i></a>
+						<a href="https://www.facebook.com/profile.php?id=100075337097846"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-telegram-plane"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sec-footer" style="height: 50px; width: 100%; background-color: rgb(67, 177, 250); padding: 1rem;">
+			<div class="container">
+				 <p style="color: white;">© Клиника «НАИ»</p>
+			</div>
+		</div>
+   </footer>
+
+	
+	<script src="./slick/slick.min.js"></script>
+	<!-- <script type="text/javascript" src="main.js"></script> -->
+	<script src="./main.js"></script>
+	<script>const typeAnimate = 'fade';</script>
+</body>
+</html>
